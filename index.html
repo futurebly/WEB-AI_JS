@@ -29,14 +29,22 @@
             <div class="col">
                 <h2>Welcome</h2>
                 Hello, WEB!
-                <input type="button" value="Night Mode" onclick="
-                    document.querySelector('#root').style.backgroundColor = 'black'
-                    document.querySelector('#root').style.color = 'white'
+
+                <input type="button" value="Night" id="DayNightMode" onclick="
+                    // 만약에 이 버튼의 value값이 night라면
+                    if(document.querySelector('#DayNightMode').value === 'Night'){
+                        document.querySelector('#root').style.backgroundColor = 'black';
+                        document.querySelector('#root').style.color = 'white';
+                        document.querySelector('#DayNightMode').value = 'Day';
+                        // 이 버튼 value 값을 day로 변경한다.
+                    } else {
+                        document.querySelector('#root').style.backgroundColor = 'white';
+                        document.querySelector('#root').style.color = 'black';
+                        document.querySelector('#DayNightMode').value = 'Night';
+                        // 이 버튼 value 값을 night로 변경한다.
+                    }
                 ">
-                <input type="button" value="Day Mode" onclick="
-                document.querySelector('#root').style.backgroundColor = 'white'
-                document.querySelector('#root').style.color = 'black'
-                ">
+
             </div>
         </div>
     </div>
