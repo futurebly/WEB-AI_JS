@@ -30,30 +30,31 @@
                 <h2>Welcome</h2>
                 Hello, WEB!
 
-                <input type="button" value="Night" id="DayNightMode" onclick="
-                    // 만약에 이 버튼의 value값이 night라면
-                    if(this.value === 'Night'){
+                <input type="button" value="night" id="dayNightMode2" onclick="
+                    function night(self){
                         document.querySelector('#root').style.backgroundColor = 'black';
                         document.querySelector('#root').style.color = 'white';
-                        this.value = 'Day';
+                        self.value = 'day';
                         let as = document.querySelectorAll('a');
                         for(let i=0;i<as.length;i=i+1){
                             as[i].style.color='white';
                         }
-                        // 이 버튼 value 값을 day로 변경한다.
-                    } else {
+                    }
+                    function day(self){
                         document.querySelector('#root').style.backgroundColor = 'white';
                         document.querySelector('#root').style.color = 'black';
-                        this.value = 'Night';
+                        self.value = 'night';
                         let as = document.querySelectorAll('a');
                         for(let i=0;i<as.length;i=i+1){
                             as[i].style.color='black';
-                        // 이 버튼 value 값을 night로 변경한다.
                         }
                     }
-
+                    if(this.value === 'night'){
+                        night(this);
+                    } else {
+                        day(this);
+                    }
                 ">
-
             </div>
         </div>
     </div>
