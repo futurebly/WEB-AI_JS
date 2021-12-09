@@ -1,17 +1,28 @@
 <html>
     <body>
         <h1>Syntax</h1>
-        <h1>Number</h1>
+        <h2>Number</h2>
         <script>
-            <!--디버깅을 할때는 console에만 나오고 화면에는 출력되지 않는 데이터가 필요-->
+            // 디버깅을 할때는 console에만 나오고 화면에는 출력되지 않는 데이터가 필요
             console.log(1);
             console.log(Math.random());
             console.log(Math.floor(1.9)) <!--floor는 내림-->
         </script>
-        <h2>문자열</h2>
+        <h2>String</h2>
         <script>
             console.log('hello world');
             console.log('hello world'.length);
         </script>
+        <h2>Variable</h2>
+        <script>
+            let VAT = 0.1;
+            let price = 10000;
+            console.log(price*VAT);
+        </script>
+        <h2>Var. app.</h2>
+        <input type="button" value="letter" onclick="
+            let name = prompt('name?');
+            console.log('Hi, '+name+'...Bye, '+name);
+        ">
     </body>
 </html>
